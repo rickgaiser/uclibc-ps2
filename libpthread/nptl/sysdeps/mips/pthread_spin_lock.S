@@ -22,7 +22,7 @@
 
 ENTRY (pthread_spin_lock)
 	.set	push
-#if _MIPS_SIM == _ABIO32
+#if (_MIPS_SIM == _ABIO32) || defined(_MIPS_ARCH_R5900)
 	.set	mips2
 #endif
 1:	ll	a2, 0(a0)

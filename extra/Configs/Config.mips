@@ -70,4 +70,10 @@ config CONFIG_MIPS_ISA_MIPS32R2
 config CONFIG_MIPS_ISA_MIPS64
 	bool "MIPS64"
 
+config CONFIG_MIPS_ISA_R5900
+	bool "r5900"
+
+config CONFIG_MIPS_ISA_DEFAULT
+	bool "default (unchanged)"
+
 endchoice

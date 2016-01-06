@@ -33,7 +33,7 @@ __pthread_spin_lock (pthread_spinlock_t *lock)
     ("\t\t\t# spin_lock\n"
      "1:\n\t"
      ".set	push\n\t"
-#if _MIPS_SIM == _ABIO32
+#if (_MIPS_SIM == _ABIO32) || defined(_MIPS_ARCH_R5900)
      ".set	mips2\n\t"
 #endif
      "ll	%1,%3\n\t"

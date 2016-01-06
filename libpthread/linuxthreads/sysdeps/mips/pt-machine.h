@@ -59,7 +59,7 @@ __compare_and_swap (long int *p, long int oldval, long int newval)
     ("/* Inline compare & swap */\n"
      "1:\n\t"
      ".set	push\n\t"
-#if _MIPS_SIM == _ABIO32
+#if (_MIPS_SIM == _ABIO32) || defined(_MIPS_ARCH_R5900)
      ".set	mips2\n\t"
 #endif
 #if _MIPS_SIM == _ABI64
